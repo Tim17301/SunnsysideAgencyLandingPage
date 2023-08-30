@@ -30,13 +30,13 @@
     const desktopHeaderImg = "../images/desktop/image-header.jpg";
 
     if (windowWidth < 900){
-        $("header").css("background-image", "url('../images/mobile/image-header.jpg')");
+        $("header").css("background-image", "url('./images/mobile/image-header.jpg')");
     } 
 
     $(document).ready(function(){
         $(window).resize(function(){
             if ($(window).width() < 900){
-                $("header").css("background-image", "url('../images/mobile/image-header.jpg')");
+                $("header").css("background-image", "url('./images/mobile/image-header.jpg')");
             }
         });
     });
@@ -44,7 +44,7 @@
     $(document).ready(function(){
         $(window).resize(function(){
             if ($(window).width() > 900){
-                $("header").css("background-image", "url('../images/desktop/image-header.jpg')");
+                $("header").css("background-image", "url('./images/desktop/image-header.jpg')");
             }
         });
     });
@@ -54,13 +54,13 @@
     const desktopDesignImage = "../images/desktop/image-graphic-design.jpg";
 
     if (windowWidth > 1000){
-        $(".gridDesign").css("background-image", "url('../images/desktop/image-graphic-design.jpg')");
+        $(".gridDesign").css("background-image", "url('./images/desktop/image-graphic-design.jpg')");
     } 
 
     $(document).ready(function(){
         $(window).resize(function(){
             if ($(window).width() < 1000){
-                $(".gridDesign").css("background-image", "url('../images/mobile/image-graphic-design.jpg')");
+                $(".gridDesign").css("background-image", "url('./images/mobile/image-graphic-design.jpg')");
             }
         });
     });
@@ -68,24 +68,24 @@
     $(document).ready(function(){
         $(window).resize(function(){
             if ($(window).width() > 1000){
-                $(".gridDesign").css("background-image", "url('../images/desktop/image-graphic-design.jpg')");
+                $(".gridDesign").css("background-image", "url('./images/desktop/image-graphic-design.jpg')");
             }
         });
     });
 
 
 
-    const mobilePhotographyImage = "../images/mobile/image-photography.jpg";
-    const desktopPhotographyImage = "../images/desktop/image-photography.jpg";
+    const mobilePhotographyImage = "./images/mobile/image-photography.jpg";
+    const desktopPhotographyImage = "./images/desktop/image-photography.jpg";
 
     if (windowWidth > 1000){
-        $(".gridPhotography").css("background-image", "url('../images/desktop/image-photography.jpg')");
+        $(".gridPhotography").css("background-image", "url('./images/desktop/image-photography.jpg')");
     } 
 
     $(document).ready(function(){
         $(window).resize(function(){
             if ($(window).width() < 1000){
-                $(".gridPhotography").css("background-image", "url('../images/mobile/image-photography.jpg')");
+                $(".gridPhotography").css("background-image", "url('./images/mobile/image-photography.jpg')");
             }
         });
     });
@@ -93,7 +93,7 @@
     $(document).ready(function(){
         $(window).resize(function(){
             if ($(window).width() > 1000){
-                $(".gridPhotography").css("background-image", "url('../images/desktop/image-photography.jpg')");
+                $(".gridPhotography").css("background-image", "url('./images/desktop/image-photography.jpg')");
             }
         });
     });
