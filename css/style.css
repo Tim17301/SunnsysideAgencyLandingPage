@@ -1,0 +1,800 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+}
+
+body{
+    max-width: 1440px;
+    background-color: white;
+}
+
+h1, h2, h3{
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+}
+
+p, a{
+    font-family: 'Barlow', sans-serif;
+}
+
+header, main, footer{
+    padding: 2rem;
+}
+/*#################Header################START#*/
+
+header{
+    background-image: url("../images/desktop/image-header.jpg");
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+}
+
+/*=============Logo / Navbar=========START=*/
+
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-container ul{
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar-container a, .navbar-container nav{
+    margin: 0;
+}
+
+
+.navbar-container nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+}
+
+.navbar-container nav a:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 2rem;
+}
+
+.navbar-container li:last-child a{
+    font-family: 'Fraunces', serif;
+    color: black;
+    background-color: white;
+    border-radius: 2rem;
+}
+
+.navbar-container li:last-child a:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 2rem;
+}
+
+/*=============Logo / Navbar=========END=*/
+
+/*=============Hamburger Menu=========START=*/
+
+#hamburger{
+    position: relative;
+    display: none;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+    margin: 0;
+}
+
+#hamburger #bar, #hamburger::after, #hamburger::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0px;
+    transition: 0.4s;
+    border-radius: 5px;
+}
+
+#hamburger.is-active::before {
+    transform: rotate(-45deg) translate(-8px, 7px);
+}
+
+#hamburger.is-active #bar{
+    opacity: 0;
+}
+
+#hamburger.is-active::after {
+    transform: rotate(45deg) translate(-8px, -7px);
+}
+
+@media (max-width: 900px) {
+    .navbar-container nav{
+        display: none;
+    }
+
+    #hamburger{
+        display: block;
+    }
+}
+/*=============Hamburger Menu=========END=*/
+
+
+/*=============Hero Text=========START=*/
+
+.hero-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    padding: 5rem 0 20rem 0;
+}
+
+.hero-text h1{
+    text-transform: uppercase;
+    color: white;
+    font-size: 6rem;
+    margin-bottom: 10rem;
+    opacity: 0;
+    transition: 2s ease-in;
+}
+
+
+@media (max-width: 620px) {
+    .hero-text{
+        padding: 2rem 0 20rem 0;
+    }
+    .hero-text h1{
+        font-size: 2.5rem;
+        margin-bottom: 6rem;
+    }
+}
+
+/*=============Hero Text=========END=*/
+
+/*=============Open Mobile Menu=========START=*/
+
+.openMobileNav-container{
+    position: relative;
+    width: 100%;
+    margin-top: 3rem;
+    z-index: 1;
+}
+
+.mobileMenu-container{
+    position: absolute;
+    width: 100%;
+    opacity: 1;
+}
+
+.openMobileNav{
+    background-color: white;
+    display: flex;
+    padding: 2rem;
+}
+
+.openMobileNav ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: space-evenly;
+}
+
+.openMobileNav a{
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #333;
+    padding: .5rem 1rem;
+}
+
+.openMobileNav li:last-child a{
+    font-family: 'Fraunces', serif;
+    background-color: hsl(51, 100%, 49%);
+    border-radius: 20px;
+}
+
+.triangle{
+    width: 0; 
+    height: 0; 
+    border-top: 20px solid transparent;
+    border-left: 20px solid transparent;
+  
+    border-right:20px solid white;
+    border-bottom:20px solid white;
+
+    margin-right: 0;
+}
+
+
+.mobileNavClosed{
+    opacity: 0;
+}
+/*=============Open Mobile Menu=========END=*/
+
+
+/*#################Header################END#*/
+
+/*#################Main################START#*/
+
+main{
+    padding: 0;
+    width: 100%;
+}
+
+/*=============Service Grid=========START=*/
+
+.grid-container{
+    display: grid;
+    gap: 0;
+}
+
+/*Egg Grid*/
+.gridEgg{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.gridEgg img{
+    width: 100%;
+    height: auto;
+}
+
+/*Transform Grid*/
+.gridTransform{
+    background-color: white;
+    width: 100%;
+    text-align: center;
+
+    padding: 5rem 0;
+}
+
+.gridTransform h2{
+    font-size: 3rem;
+    padding: 0 2rem 2rem 2rem;
+}
+
+.gridTransform p{
+    font-size: 1.3rem;
+    line-height: 2rem;
+    padding: 0 2rem 2rem 2rem;
+    color: hsl(210, 4%, 67%);
+}
+
+.gridTransform a{
+    font-family: 'Fraunces', serif;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration-color: hsl(51, 100%, 49%);
+    text-decoration-thickness: 10px;
+    text-underline-position: -1px;
+    text-transform: uppercase;
+
+    padding-bottom: 4rem;
+}
+
+/*Cup Grid*/
+.gridCup{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.gridCup img{
+    width: 100%;
+    height: auto;
+}
+
+/*Standout Grid*/
+.gridStandout{
+    background-color: white;
+    width: 100%;
+    text-align: center;
+
+    padding: 5rem 0;
+}
+
+.gridStandout h2{
+    font-size: 3rem;
+    padding: 0 2rem 2rem 2rem;
+}
+
+.gridStandout p{
+    font-size: 1.3rem;
+    line-height: 2rem;
+    padding: 0 2rem 2rem 2rem;
+    color: hsl(210, 4%, 67%);
+}
+
+.gridStandout a{
+    font-family: 'Fraunces', serif;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration-color: hsl(7, 99%, 70%);
+    text-decoration-thickness: 10px;
+    text-underline-position: -1px;
+    text-transform: uppercase;
+
+    padding-bottom: 4rem;
+}
+
+/*Design Grid*/
+.gridDesign{
+    width: 100%;
+    background-image: url("../images/mobile/image-graphic-design.jpg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.gridDesign h2{
+    color: #333;
+    font-size: 2.5rem;
+    padding: 30rem 2rem 2rem 2rem;
+}
+
+.gridDesign a{
+    text-decoration: none;
+}
+
+.gridDesign p{
+    font-size: 1.3rem;
+    line-height: 2rem;
+    padding: 0 2rem 6rem 2rem;
+    color: #333;
+}
+
+/*Photography Grid*/
+.gridPhotography{
+    width: 100%;
+    background-image: url("../images/mobile/image-photography.jpg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.gridPhotography h2{
+    color: #333;
+    font-size: 2.5rem;
+    padding: 30rem 2rem 2rem 2rem;
+}
+
+.gridPhotography a{
+    text-decoration: none;
+}
+
+.gridPhotography p{
+    font-size: 1.3rem;
+    line-height: 2rem;
+    padding: 0 2rem 6rem 2rem;
+    color: #333;
+}
+@media (min-width: 900px) {
+    .grid-container{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /*Transform Grid*/
+    .gridTransform{
+        order: 1;
+        padding: 0;
+        padding-bottom: 4rem;
+    }
+
+    .gridTransform h2{
+        font-size: 2.5rem;
+        padding: 4rem 2rem 2rem 2rem;
+    }
+    
+    .gridTransform p{
+        font-size: 1.1rem;
+    }
+    
+    .gridTransform a{
+        font-size: 1.2rem;
+    }
+
+    /*Egg Grid*/
+    .gridEgg{
+        order: 2;
+        overflow: hidden;
+    }
+    .gridEgg img{
+        height: 100%;
+        
+    }
+
+    /*Cup Grid*/
+    .gridCup{
+       order: 3;
+       overflow: hidden;
+    }
+    .gridCup img{
+        height: 100%;
+    }
+
+    /*Standout Grid*/
+    .gridStandout{
+        order: 4;
+        padding: 0;
+        padding-bottom: 4rem;
+    }
+
+    .gridStandout h2{
+        font-size: 2.5rem;
+        padding: 4rem 2rem 2rem 2rem;
+    }
+    
+    .gridStandout p{
+        font-size: 1.1rem;
+    }
+    
+    .gridStandout a{
+        font-size: 1.2rem;
+    }
+    
+    /*Design Grid*/
+    .gridDesign{
+        order: 5;
+    }
+
+    /*Photography Grid*/
+    .gridPhotography{
+        order: 6;
+    }
+
+}    
+
+@media (min-width: 1000px) {
+    /*Transform Grid*/
+    .gridTransform{
+        padding: 5rem 0;
+    }
+
+    .gridTransform h2{
+        font-size: 3rem;
+        padding: 0 2rem 2rem 2rem;
+    }
+    
+    .gridTransform p{
+        font-size: 1.3rem;
+    }
+    
+    .gridTransform a{
+        font-size: 1.5rem;
+    }
+
+    /*Standout Grid*/
+    .gridStandout{
+        padding: 5rem 0;
+    }
+
+    .gridStandout h2{
+        font-size: 3rem;
+        padding: 0 2rem 2rem 2rem;
+    }
+    
+    .gridStandout p{
+        font-size: 1.3rem;
+    }
+    
+    .gridStandout a{
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1220px) {
+     /*Transform Grid*/
+    .gridTransform h2{
+        font-size: 3.5rem;
+        padding: 0 5rem 2rem 5rem;
+    }
+    
+    .gridTransform p{
+        font-size: 1.3rem;
+        padding: 0 5rem 2rem 5rem;
+    }
+    
+    .gridTransform a{
+        font-size: 1.5rem;
+    }
+
+    /*Standout Grid*/
+    .gridStandout h2{
+        font-size: 3.5rem;
+        padding: 0 5rem 2rem 5rem;
+    }
+    
+    .gridStandout p{
+        font-size: 1.3rem;
+        padding: 0 5rem 2rem 5rem;
+    }
+    
+    .gridStandout a{
+        font-size: 1.5rem;
+    }
+
+    /*Design Grid*/
+    .gridDesign h2{
+        padding: 25rem 2rem 2rem 2rem;
+    }
+
+    .gridDesign p{
+        padding: 0 4rem 4rem 4rem;
+    }
+
+    /*Photography Grid*/
+    .gridPhotography h2{
+        padding: 25rem 2rem 2rem 2rem;
+    }
+
+    .gridPhotography p{
+        padding: 0 4rem 4rem 4rem;
+    }
+}
+/*=============Service Grid=========END=*/
+
+/*=======================Testimonials=========================START=*/
+.testimonial-healine{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial-healine h1{
+    font-size: 1.5rem;
+    letter-spacing: .3rem;
+    text-transform: uppercase;
+    color: hsl(210, 4%, 67%);
+    padding: 125px 0 5rem 0;
+}
+
+@media (max-width: 400px) {
+    .testimonial-healine h1{
+        font-size: 1.1rem;
+    }
+}
+
+#testimonials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.pb-image{
+    border-radius: 50%;
+    overflow: hidden;
+    height: 100px;
+    width: 100px;
+}
+
+.pb-image img{
+   object-fit: cover;
+   width: 100%;
+}
+
+.testimonial .review{
+    color: #333;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    padding: 1.5rem 0;
+}
+
+.testimonial .name{
+    color: #333;
+    font-size: 1.3rem;
+    padding: 0;
+}
+
+.testimonial .profession{
+    color: #333;
+    font-size: 1rem;
+    padding-top: .5rem;
+    color: hsl(210, 4%, 67%);
+}
+
+/*===========Testimonial Mobile==============START=*/
+.nextBtn-mobile{
+    color: #333;
+    font-size: 2rem;
+    padding: 50px 130px;
+}
+
+.all-testimonials-mobile{
+    height: 1250px;
+    overflow: hidden;
+}
+
+.testimonial{
+    height: 100%;
+    padding: 5px 20px;
+}
+
+.testimonial-box-mobile{
+    height: 2250px;
+    width: 300px;
+    position: relative;
+    transition: all 2s ease;
+}
+
+.testimonial-container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0;
+    height: 350px;
+
+    transition: all 1s ease-in-out;
+}
+
+.testimonial-box-mobile .testimonial-container:first-child{
+    position: absolute;
+    top: 0;
+}
+
+.testimonial-box-mobile .testimonial-container:nth-child(2){
+    position: absolute;
+    top: 450px;
+}
+
+.testimonial-box-mobile .testimonial-container:nth-child(3){
+    position: absolute;
+    top: 900px;
+}
+
+.testimonial-box-mobile .testimonial-container:nth-child(4){
+    position: absolute;
+    top: 1350px;
+}
+
+.testimonial-box-mobile .testimonial-container:nth-child(5){
+    position: absolute;
+    top: 1800px;
+}
+/*===========Testimonial Mobile==============END=*/
+
+
+/*===========Testimonial Desktop==============START=*/
+.nextBtn-desktop{
+    color: #333;
+    font-size: 2rem;
+    padding: 150px 20px;
+}
+
+.previousBtn{
+    color: #333;
+    font-size: 2rem;
+    padding: 150px 20px;
+}
+
+.all-testimonials-desktop{
+    height: 350px;
+    width: 940px;
+    overflow: hidden;
+}
+
+
+.testimonial-box-desktop{
+    height: 350px;
+    width: 1580px;
+    position: relative;
+    transition: all 2s ease;
+}
+
+.testimonial-container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    height: 350px;
+    width: 300px;
+
+    transition: all 1s ease-in-out;
+}
+
+.testimonial-box-desktop .testimonial-container:first-child{
+    position: absolute;
+    left: -320px;
+}
+
+.testimonial-box-desktop .testimonial-container:nth-child(2){
+    position: absolute;
+    left: 0;
+}
+
+.testimonial-box-desktop .testimonial-container:nth-child(3){
+    position: absolute;
+    left: 320px;
+}
+
+.testimonial-box-desktop .testimonial-container:nth-child(4){
+    position: absolute;
+    left: 640px;
+}
+
+.testimonial-box-desktop .testimonial-container:nth-child(5){
+    position: absolute;
+    left: 960px;
+}
+/*===========Testimonial Desktop==============END=*/
+
+@media (min-width: 1000px) {
+    #testimonials{
+        padding-bottom: 125px;
+    }
+}
+
+/*=======================Testimonials=========================END=*/
+
+
+/*=======================Four Image Galerie=========================START=*/
+.fourImageGalerie-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.fourImageGalerie-container img{
+    width: 100%;
+}
+
+@media (min-width: 1000px) {
+    .fourImageGalerie-container{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    }
+}
+/*=======================Four Image Galerie=========================END=*/
+
+/*#################Main###############END#*/
+
+/*#################Footer###############START#*/
+
+footer{
+    background-color: hsl(168, 34%, 41%);
+}
+
+.logo-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a{
+    color: #333;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+.navbar-footer{
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-footer p{
+    padding: 2rem 0;
+}
+
+.socialmedia{
+    display: flex;
+    justify-content: center;
+}
+
+.socialmedia a{
+    font-size: 1.3rem;
+}
+
+
+/*#################Footer##############END#*/
